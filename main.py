@@ -33,7 +33,7 @@ password = 'password_token'
 
 # Sender and receiver
 me = "sender@email.com"
-you = "destination@email.com"
+you = "receiver@email.com"
 
 # Create message container - the correct MIME type is multipart/alternative.
 msg = MIMEMultipart('alternative')
@@ -78,4 +78,5 @@ mail.ehlo()
 mail.login(username, password)
 mail.sendmail(me, you, msg.as_string())
 mail.quit()
+
 print('E-mail enviado com sucesso!')
